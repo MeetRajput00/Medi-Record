@@ -1,0 +1,17 @@
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 40px;
+}
+
+.titleDoctor {
+    display: flex;
+    margin: 40px 0;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 500;
+}
