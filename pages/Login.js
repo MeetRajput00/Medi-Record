@@ -8,7 +8,7 @@ function Login() {
   return (
     <div className={styles.login_container}>
       <div className={styles.login_card}>
-        <div className={styles.title}>MediChain</div>
+        <div className={styles.title}>MediDoc</div>
         <Image src={icon} width={200} height={150} />
         <div className={styles.sign_in_container}>
           {authError && (
@@ -17,14 +17,12 @@ function Login() {
               {authError.message}
             </p>
           )}
-          <Link href='/doctor'>
-            <a><button className={styles.CSSbutton}>Login as Doctor</button></a>
-          </Link>
-          <button
+            <button
             onClick={authenticate}
           >
-            Login as patient
+            Login with MetaMask
           </button>
+                    
         </div>
       </div>
     </div>
