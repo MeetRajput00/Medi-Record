@@ -1,20 +1,25 @@
 .login_container {
-  background-color: rgb(33, 34, 39);
-  height: 100vh;
-  display: grid;
-  align-items: center;
-  justify-content: center;
+  background: #76b852; /* fallback for old browsers */
+  background: rgb(141,194,111);
+  background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;  
+  width: 100%;
+  height: 640px;
+  padding: 8% 0 0;
+  margin: auto;
 }
 
 .login_card {
-  background-color: rgb(189, 212, 231);
-  border: black;
-  border-width: 10px;
-  width: 500px;
-  height: 300px;
-  border-radius: 40px;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 .title {
@@ -34,7 +39,7 @@
   justify-content: center;
 }
 
-.sign_in_container>button {
+/* .sign_in_container>button {
   padding: 10px;
   border-radius: 40px;
   background-color: rgb(134, 147, 171);
@@ -47,7 +52,7 @@
   background-color: rgb(134, 147, 171);
   color: white;
   cursor: pointer;
-}
+} */
 
 .error {
   color: red;
@@ -56,3 +61,21 @@
   font-style: italic;
   margin: 5px;
 }
+.loginButton{
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.loginButton:hover{
+  background: #389e3b;
+}
+
