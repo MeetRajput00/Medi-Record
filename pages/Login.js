@@ -1,6 +1,6 @@
 import styles from "../styles/Login.module.css";
 import Image from "next/image";
-import icon from "./Images/heart.png";
+import icon from "../pages/Images/heart.png";
 import { useMoralis } from "react-moralis";
 import Link from 'next/link';
 function Login() {

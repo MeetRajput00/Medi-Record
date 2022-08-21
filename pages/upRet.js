@@ -1,12 +1,13 @@
 import Link from 'next/link';
+import styles from '../styles/upRet.module.css';
 export default function upRet(){
     return(
-        <div>
-            <Link href='/Homes'>
-                <a>
+        <div className={styles.container}>
+        
+                <a href='/Homes'>
                     <button>Upload Data</button>
                 </a>
-            </Link>
+            
             <Link href='/retrieveData'>
                 <a>
                     <button>Retrieve Data</button>

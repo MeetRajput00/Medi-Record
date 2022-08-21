@@ -1,5 +1,7 @@
 import React from "react";
 import Link from 'next/link';
+import styles from '../styles/userAuth.module.css';
+import SelectInput from "@mui/material/Select/SelectInput";
 
 class userAuth
  extends React.Component {
@@ -9,12 +11,13 @@ class userAuth
     this.cameraNumber = 0;
     this.state = {
       imageDataURL: null,
+      recognizition: "Verify user Identity",
     };
   }
 
   initializeMedia = async () => {
     this.setState({ imageDataURL: null });
-
+    this.setState({ recognizition: "Verify user Identity"});
     if (!("mediaDevices" in navigator)) {
       navigator.mediaDevices = {};
     }
@@ -72,6 +75,8 @@ class userAuth
     this.setState({ imageDataURL: canvas.toDataURL() });
     var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
     window.location.href=image; 
+    var msg="Verifying user...";
+    this.setState({recognizition:msg});
     console.log("photo saved!!!")
   };
 
@@ -89,6 +94,7 @@ class userAuth
       <img src={this.state.imageDataURL} alt="cameraPic" />
     ) : (
       <video
+        className={styles.box}
         ref={(refrence) => {
           this.player = refrence;
         }}
@@ -97,15 +103,22 @@ class userAuth
     );
 
     return (
-      <div className="userAuth
-      ">
+      <div className={styles.userAuth}>
         {playerORImage}
-        <button onClick={this.initializeMedia}>Take Photo</button>
+        <div className={styles.buttonsSheet}>
+        <button 
+        className={styles.picture}
+        onClick={this.initializeMedia}>Open Camera</button>
         <Link href='/upRet'>
             <a>
-                <button onClick={this.capturePicture}>Capture</button>
+                <button 
+                 className={styles.capture}
+                onClick={this.capturePicture}>Capture</button>
             </a>
         </Link>
+        </div>
+        
+        <p>{this.state.recognizition}</p>
       </div>
     );
   }

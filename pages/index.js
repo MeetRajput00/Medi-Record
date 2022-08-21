@@ -1,6 +1,6 @@
-import Login from "../pages/Login";
+import Login from "./Login";
 import { useMoralis } from "react-moralis";
-import Form from "../pages/Homes";
+import Form from "../components/Homes";
 import icon from "../pages/Images/logo.svg"
 import Image from "next/image";
 import styles from "../styles/index.module.css";
