@@ -1,7 +1,7 @@
 import Login from "./Login";
 import { useMoralis } from "react-moralis";
-import Form from "../components/Homes";
-import icon from "../pages/Images/logo.svg"
+import Form from "./Homes";
+import icon from "./Images/logo.svg"
 import Image from "next/image";
 import styles from "../styles/index.module.css";
 import Doctor from "../pages/Doctor";
